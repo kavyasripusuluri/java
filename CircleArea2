@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+class CircleArea{
+    double r;
+    CircleArea(){
+        r=0;
+    }
+    CircleArea(double c){
+        r = c;
+    }
+    double area(){
+        return (22/7.0)*r*r;
+    }
+    void SetCircle(double r){
+        this.r=r;
+    }
+}
+
+public class CircleMain{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        CircleArea ca1 = new CircleArea();
+        CircleArea ca2 = new CircleArea();
+        System.out.println("Enter the radius of 2 circle:");
+        double radius1 = sc.nextDouble();
+        double radius2 = sc.nextDouble();
+        ca1.SetCircle(radius1);
+       
+        ca2.SetCircle(radius2);
+        System.out.println("Area of 1st circle is"+ca1.area());
+        System.out.println("Area of 2nd circle is"+ca2.area());
+    }
+}
+
+
